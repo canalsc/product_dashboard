@@ -12,3 +12,15 @@ function fetchProductsThen() {
     });
 }
  
+// Step 4: fetchProductsAsync - uses async/await with try/catch
+async function fetchProductsAsync() {
+  try {
+    const response = await fetch(
+      "https://www.course-api.com/javascript-store-products"
+    );
+    const products = await response.json();
+    displayProducts(products);
+  } catch (error) {
+    handleError(error);
+  }
+}
