@@ -60,4 +60,9 @@ function displayProducts(products) {
  
     container.appendChild(card);
   });
-} 
+}  
+
+// Step 6: handleError - reusable error logger
+function handleError(error) {
+  console.log(`An error occurred: ${error.message}`);
+}
